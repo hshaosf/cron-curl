@@ -49,7 +49,7 @@ class CronCurl{
 		$line = array(
 			date("Ymd"), // date
 			date("H:i:s"), // time
-			$_SERVER['REMOTE_ADDR']?$_SERVER['REMOTE_ADDR']:'-', // ip
+			!empty($_SERVER['REMOTE_ADDR'])?$_SERVER['REMOTE_ADDR']:'-', // ip
 			$request, // request
 			$status, // status
 			$comment
