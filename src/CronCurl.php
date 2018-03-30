@@ -52,7 +52,7 @@ class CronCurl{
 			!empty($_SERVER['REMOTE_ADDR'])?$_SERVER['REMOTE_ADDR']:'-', // ip
 			$request, // request
 			$status, // status
-			$comment
+			substr($comment, 0, 140)
 		); 
 
 		if(file_exists($this->settings['log_file'])){
